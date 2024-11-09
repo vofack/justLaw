@@ -1,1 +1,141 @@
 /* You can add global styles to this file, and also import other style files */
+/* Theme Description
+-------------------------------------------------
+
+	  Theme Name:
+	  Author:
+	  Support:
+	  Description:
+	  Version:
+	  
+------------------------------------------------- 
+*/
+
+/* CSS Index
+-------------------------------------------------
+
+	1. Theme default css
+	2. header
+	3. slider
+	4. about-area
+	5. features-box
+	6. department
+	7. team
+	8. video-area
+	9. counter
+	10. footer
+
+-------------------------------------------------
+*/
+
+// Default scss  
+@import './assets/scss/variables';
+@import './assets/scss/mixins';
+@import './assets/scss/overlay';
+@import './assets/scss/common';
+@import './assets/scss/color';
+
+
+// Homepage1
+@import './assets/scss/headerMenu';
+@import './assets/scss/h1-hero';
+@import './assets/scss/legal-practice';
+@import './assets/scss/recentCase';
+@import './assets/scss/about-low';
+@import './assets/scss/h1-contact';
+@import './assets/scss/getAnswer';
+@import './assets/scss/footer';
+
+
+@import './assets/scss/team';
+@import './assets/scss/testimonial';
+@import './assets/scss/blog';
+
+
+// inner Page
+@import './assets/scss/services';
+@import './assets/scss/services-details';
+
+// Default Element Page
+@import './assets/scss/blog_page';
+@import './assets/scss/contact';
+@import './assets/scss/bradcam';
+@import './assets/scss/extend';
+@import './assets/scss/elements';
+
+.boxed-btn4-xs {
+	display: inline-block;
+	padding: 5px 20px 5px 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	color: #fff !important;
+	text-transform: capitalize;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	cursor: pointer;
+	color: #FFD700 !important;
+	border: 1px solid #FFD700;
+	background: transparent;
+  }
+  
+  /* line 67, ../../Arafath/CL/December/234. Finance/HTML/scss/_btn.scss */
+  .boxed-btn4-xs:hover {
+	color: #fff !important;
+	border: 1px solid #FFD700;
+	background: transparent;
+	border: 0;
+	background: #FFD700;
+	border: 1px solid transparent;
+  }
+  
+  /* line 75, ../../Arafath/CL/December/234. Finance/HTML/scss/_btn.scss */
+  .boxed-btn4-xs:focus {
+	outline: none;
+  }
+  
+  
+  .boxed-btn4-red-xs {
+	display: inline-block;
+	padding: 5px 20px 5px 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	color: #fff !important;
+	text-transform: capitalize;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	cursor: pointer;
+	color: red !important;
+	border: 1px solid red;
+	background: transparent;
+  }
+  
+  /* line 67, ../../Arafath/CL/December/234. Finance/HTML/scss/_btn.scss */
+  .boxed-btn4-red-xs:hover {
+	color: #fff !important;
+	border: 1px solid red;
+	background: transparent;
+	border: 0;
+	background: red;
+	border: 1px solid transparent;
+  }
+  
+  /* line 75, ../../Arafath/CL/December/234. Finance/HTML/scss/_btn.scss */
+  .boxed-btn4-red-xs:focus {
+	outline: none;
+  }
+  
+  

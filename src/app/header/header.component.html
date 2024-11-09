@@ -1,0 +1,142 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Services en immigration Kwuning</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="./../../assets/img/favicon.ico">
+
+    <!-- CSS here -->
+        <link rel="stylesheet" href="./../../assets/css/bootstrap.min.scss">
+        <link rel="stylesheet" href="./../../assets/css/owl.carousel.min.scss">
+        <link rel="stylesheet" href="./../../assets/css/slicknav.scss">
+        <link rel="stylesheet" href="./../../assets/css/animate.min.scss">
+        <link rel="stylesheet" href="./../../assets/css/magnific-popup.scss">
+        <link rel="stylesheet" href="./../../assets/css/fontawesome-all.min.scss">
+        <link rel="stylesheet" href="./../../assets/css/themify-icons.scss">
+        <link rel="stylesheet" href="./../../assets/css/flaticon.scss">
+        <link rel="stylesheet" href="./../../assets/css/slick.scss">
+        <link rel="stylesheet" href="./../../assets/css/nice-select.scss">
+        <link rel="stylesheet" href="./../../assets/css/styles.scss">
+        <link rel="stylesheet" href="./../../assets/scss/style.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_variables.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_headerMenu.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_testimonial.scss">
+
+
+       <!-- <link rel="stylesheet" href="./../../assets/scss/_about-low.scss">
+         <link rel="stylesheet" href="./../../assets/scss/_blog_page.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_blog.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_bradcam.scss">
+       <link rel="stylesheet" href="./../../assets/scss/_color.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_common.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_contact.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_david-droga.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_elements.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_extend.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_footer.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_gallery.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_getAnswer.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_h1-contact.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_h1-hero.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_legal-practice.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_mixins.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_overlay.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_safe-industery.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_services_section.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_services-details.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_services.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_team.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_testimonial.scss">
+        <link rel="stylesheet" href="./../../assets/scss/_variables.scss"> -->
+
+</head>
+<header>
+    <!-- Header Start -->
+   <div class="header-area header-sticky">
+                <!-- Mobile Menu -->
+    <div class="col-12">
+        <div (window:resize)="onResize($event)" class="mobile_menu d-block d-lg-none">
+                <nav role="navigation">
+                    <div id="menuToggle">
+                                <input type="checkbox" id="menuCheckbox"  />
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <!-- <div  style="cursor:pointer; font-size: 10px; margin-left: {{paddinLeftSize}}px; " class="boxed-btn4" (click)="changeLanguage()">{{language}}</div> -->
+                            <ul class="ulClass" id="menu"> 
+                            <li><a (click)="Home()"><img src="./../../assets/img/logo/logo.png" alt=""></a></li>
+                            <li><a class="aClass" (click)="Home()" style="cursor:pointer;"  >Home</a></li>
+                            <li *ngIf="showUser"><a class="aClass"  style="cursor:pointer;"  >My infos</a></li>
+                            <li><a class="aClass"   >About</a></li>
+                            <li *ngIf="showUser"><a class="aClass"  style="cursor:pointer;"  >Beneficiary</a></li>
+                            <li *ngIf="showUser"><a class="aClass"  style="cursor:pointer;"  >Transactions</a></li>
+                            <li class="aClass"><a  style="cursor:pointer;"  >Faq</a></li>
+                            <li><a class="aClass"  style="cursor:pointer;"  (click)="contact()" >Contact</a></li>
+                            <li *ngIf="showConnexion"><a class="aClass" data-wow-duration="1s" data-wow-delay=".1s"    >Connexion</a></li>
+                            <li *ngIf="showUser"  ><a class="aClass"> <i class="glyphicon glyphicon-user wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" ></i>{{user}}</a></li>
+                            <li><a class="aClass"  style="cursor:pointer; font-weight: bold;">{{language}}</a></li>
+                            <li *ngIf="showUser"    style="cursor:pointer; text-align: -webkit-center;"><a class="aClass"> <i class="glyphicon glyphicon-off text-danger wow fadeInUp " data-wow-duration="1s" data-wow-delay=".1s" ></i> </a></li>
+                            </ul>
+                    </div>
+                    
+                </nav>
+        </div>                  
+</div>
+<!-- / Mobile Menu -->
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-xl-2 col-lg-1 col-md-1">
+                    <div class="logo d-none d-lg-block">
+                    <a (click)="Home()"><img src="./../../assets/img/logo/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-8 col-md-6">
+                    <!-- Main-menu -->
+                    <div class="main-menu f-right d-none d-lg-block">
+                        <nav>
+                            <ul id="navigation">  
+                                <li><a (click)="Home()">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="caseStudies.html">Case Studies</a></li>
+                                <li><a href="blog.html">Blog</a>
+                                    <ul class="submenu">
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="single-blog.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a>Pages</a>
+                                    <ul class="submenu">
+                                        <li><a (click)="contact()">Contact</a></li>
+                                        <li><a href="elements.html">Element</a></li>
+                                        <li><a href="case_details.html">Case Details</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>             
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <!-- Header-btn -->
+                    <div class="header-btn d-none d-lg-block f-right">
+                        <a href="#" class="btn header-btn">Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+    <!-- Header End -->
+</header>
+
+<ngx-spinner
+            bdColor= "rgba(151,149,149,0.4)"
+            size="large"
+            color="#29b1c9"
+            type="ball-clip-rotate-pulse"
+
+            >
+</ngx-spinner>
