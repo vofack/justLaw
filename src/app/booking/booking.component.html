@@ -1,0 +1,339 @@
+<div class="container-fluid mt-5 pt-5   mb-5 pb-5">
+    <div class="card shadow-lg p-4">
+      <h2 class="text-center mb-4">Prendre votre rendez-vous</h2>
+  
+      <form [formGroup]="bookingForm" (ngSubmit)="submitBooking()">
+        <!-- Name Input -->
+        <div class="mb-3">
+          <label class="form-label">Nom</label>
+          <input type="text" class="form-control" formControlName="name" placeholder="Entrez votre nom">
+          <div *ngIf="bookingForm.controls['name'].invalid && bookingForm.controls['name'].touched" class="text-danger">
+            Votre nom est requis!
+          </div>
+        </div>
+  
+        <!-- Email Input -->
+        <div class="mb-3">
+          <label class="form-label">Mail</label>
+          <input type="email" class="form-control" formControlName="email" placeholder="Entrez votre mail">
+          <div *ngIf="bookingForm.controls['email'].invalid && bookingForm.controls['email'].touched" class="text-danger">
+            Entrez un mail valide!
+          </div>
+        </div>
+  
+        <!-- Date Picker -->
+        <div class="mb-3">
+          <label class="form-label">Date de Naissance</label>
+          <input type="date" class="form-control" formControlName="date">
+          <div *ngIf="bookingForm.controls['date'].invalid && bookingForm.controls['date'].touched" class="text-danger">
+            Date requise!
+          </div>
+        </div>
+  
+        <!-- Time Picker -->
+        <!-- <div class="mb-3">
+          <label class="form-label">Select Time</label>
+          <input type="time" class="form-control" formControlName="time">
+          <div *ngIf="bookingForm.controls['time'].invalid && bookingForm.controls['time'].touched" class="text-danger">
+            Time is required!
+          </div>
+        </div> -->
+
+         <!-- Situation matrimoniale et sexe -->
+
+        <div class="mb-3">
+            <div class="row">
+              <div class="col"> <label class="form-label">Sexe</label></div>
+              <div class="col"> <label class="form-label">Situation matrimoniale</label></div>
+
+            </div>
+            
+            <div class="row">
+              <div class="col">
+                <select class="form-control  w-100" formControlName="sexe">
+                    <option value="" disabled selected>Choisissez un seze</option>
+                        <option value="Masculin">Masculin</option>
+                        <option value="Féminin">Féminin</option>
+                        <option value="Autre">Autre</option>
+                </select>
+             </div>
+              <div class="col">
+                <select class="form-control  w-100" formControlName="matrimonial">
+                    <option value="" disabled selected>Choisissez une catégorie</option>
+                        <option value="Marié(e)">Marié(e)</option>
+                        <option value="Divorcé(e)">Divorcé(e)</option>
+                        <option value="Autre">Autre</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+                <div *ngIf="bookingForm.controls['sexe'].invalid && bookingForm.controls['sexe'].touched" class="text-danger col">
+                    Votre sexe est requis!
+                </div>
+                <div *ngIf="bookingForm.controls['matrimonial'].invalid && bookingForm.controls['matrimonial'].touched" class="text-danger col">
+                    Votre etat matrimonial est requis!
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="mb-3">
+            <div class="row">
+              <div class="col"> <label class="form-label">Pays d'Origine</label></div>
+              <div class="col"> <label class="form-label">Pays de residence</label></div>
+
+            </div>
+            
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" formControlName="origin" placeholder="Entrez votre pays d'origine">
+            </div>
+              <div class="col">
+                <input type="text" class="form-control" formControlName="residence" placeholder="Entrez votre pays de residence">
+              </div>
+            </div>
+
+            <div class="row">
+                <div *ngIf="bookingForm.controls['origin'].invalid && bookingForm.controls['origin'].touched" class="text-danger col">
+                    Votre pays d'origine est requis!
+                </div>
+                <div *ngIf="bookingForm.controls['residence'].invalid && bookingForm.controls['residence'].touched" class="text-danger col">
+                    Votre pays de residence est requis!
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Avez vos une formation universitaire ?</label>
+            <div class="form-check form-switch">
+              <!-- <input class="form-check-input" type="checkbox" id="toggleSwitch" formControlName="toggleOption"> -->
+              <input class="form-check-input" style="background-color: #29b1c9;" type="checkbox" id="toggleSwitch" formControlName="trainingToggleOption" (change)="onTrainingToggleChange($event)">
+
+              <label class="form-check-label" for="toggleSwitch">Non / Oui</label>
+            </div>
+          </div>
+
+
+          
+          <div *ngIf="trainingIsOptionActive" class="mb-3">
+            <div class="row">
+              <div class="col"> <label class="form-label">La plus récente ?</label></div>
+              <div class="col"> <label class="form-label">Quelle expertise ?</label></div>
+              <div class="col"> <label class="form-label">Annees ?</label></div>
+
+            </div>
+            
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" formControlName="formation" placeholder="Entrez votre derniere formation">
+            </div>
+              <div class="col">
+                <input type="text" class="form-control" formControlName="trainingExpertise" placeholder="Entrez votre expertise">
+              </div>
+              <div class="col">
+                <input type="number" class="form-control" formControlName="trainingNberExpertise" placeholder="Nombres d'annees d'expertise">
+              </div>
+            </div>
+
+            <div class="row">
+                <div *ngIf="bookingForm.controls['formation'].invalid && bookingForm.controls['formation'].touched" class="text-danger">
+                    Formation requise!
+                </div>
+                <div *ngIf="bookingForm.controls['trainingExpertise'].invalid && bookingForm.controls['trainingExpertise'].touched" class="text-danger col">
+                    Expertise est requise!
+                </div>
+                <div *ngIf="bookingForm.controls['trainingNberExpertise'].invalid && bookingForm.controls['trainingNberExpertise'].touched" class="text-danger col">
+                    Nombre d'Annees requise!
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="mb-3">
+            <label class="form-label">Avez vos une formation professionelle universitaire ?</label>
+            <div class="form-check form-switch">
+              <!-- <input class="form-check-input" type="checkbox" id="toggleSwitch" formControlName="toggleOption"> -->
+              <input class="form-check-input" style="background-color: #29b1c9;" type="checkbox" id="toggleSwitch" formControlName="proToggleOption" (change)="onProToggleChange($event)">
+
+              <label class="form-check-label" for="toggleSwitch">Non / Oui</label>
+            </div>
+        </div>
+
+
+          
+          <div *ngIf="proIsOptionActive" class="mb-3">
+            <div class="row">
+                <div class="col"> <label class="form-label">La plus récente ?</label></div>
+                <div class="col"> <label class="form-label">Quelle expertise ?</label></div>
+                <div class="col"> <label class="form-label">Annees ?</label></div>
+
+            </div>
+            
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" formControlName="professional" placeholder="Entrez votre derniere formation">
+            </div>
+              <div class="col">
+                <input type="text" class="form-control" formControlName="proExpertise" placeholder="Entrez votre expertise">
+              </div>
+              <div class="col">
+                <input type="number" class="form-control" formControlName="proNberExpertise" placeholder="nombres d'nnees d'expertise">
+              </div>
+            </div>
+
+            <div class="row">
+                <div *ngIf="bookingForm.controls['professional'].invalid && bookingForm.controls['professional'].touched" class="text-danger">
+                    Formation requise!
+                </div>
+                <div *ngIf="bookingForm.controls['proExpertise'].invalid && bookingForm.controls['proExpertise'].touched" class="text-danger col">
+                    Expertise est requise!
+                </div>
+                <div *ngIf="bookingForm.controls['proNberExpertise'].invalid && bookingForm.controls['proNberExpertise'].touched" class="text-danger col">
+                    Nombre d'Annees requise!
+                </div>
+            </div>
+        </div>
+
+
+
+         <!-- langues francaise-->
+
+         <div class="mb-3">
+            <label class="form-label">Avez vous des compétences linguistiques en francais?
+            </label>
+            <div class="form-check form-switch">
+              <input class="form-check-input" style="background-color: #29b1c9;" type="checkbox" id="toggleSwitch" formControlName="frenchToggleOption" (change)="onFrenchToggleChange($event)">
+
+              <label class="form-check-label" for="toggleSwitch">Non / Oui</label>
+            </div>
+        </div>
+
+
+          
+        <div *ngIf="frenchIsOptionActive" class="mb-3">
+            <div class="row">
+                <div class="col"> <label class="form-label">Types ?</label></div>
+                <div class="col"> <label class="form-label">Score ?</label></div>
+
+            </div>
+            
+            <div class="row">
+              <div class="col">
+                    <select class="form-control  w-100" formControlName="frenchTest">
+                        <option value="" disabled selected>Choisissez une catégorie</option>
+                            <option value="TEF">TEF</option>
+                            <option value="TCF">TCF</option>
+                            <option value="Autre">Autre</option> 
+                    </select>
+              </div>
+
+              <div class="col">
+                <input type="number" class="form-control" formControlName="frenchScore" placeholder="nombres d'nnees d'expertise">
+              </div>
+            </div>
+
+            <div class="row">
+                <div *ngIf="bookingForm.controls['frenchTest'].invalid && bookingForm.controls['frenchTest'].touched" class="text-danger col">
+                    Type requis!
+                </div>
+                <div *ngIf="bookingForm.controls['frenchScore'].invalid && bookingForm.controls['frenchScore'].touched" class="text-danger col">
+                    Score requis!
+                </div>
+            </div>
+        </div>
+
+
+        <!-- langue anglais -->
+
+
+        <div class="mb-3">
+            <label class="form-label">Avez vous des compétences linguistiques en anglais?
+            </label>
+            <div class="form-check form-switch">
+              <input class="form-check-input" style="background-color: #29b1c9;" type="checkbox" id="toggleSwitch" formControlName="enToggleOption" (change)="onEnToggleChange($event)">
+
+              <label class="form-check-label" for="toggleSwitch">Non / Oui</label>
+            </div>
+        </div>
+
+
+          
+        <div *ngIf="enIsOptionActive" class="mb-3">
+            <div class="row">
+                <div class="col"> <label class="form-label">Types ?</label></div>
+                <div class="col"> <label class="form-label">Score ?</label></div>
+
+            </div>
+            
+            <div class="row">
+              <div class="col">
+                    <select class="form-control  w-100" formControlName="enTest">
+                        <option value="" disabled selected>Choisissez une catégorie</option>
+                            <option value="TEF">TOEFL</option>
+                            <option value="TCF">IELTS</option>
+                            <option value="Autre">Autre</option> 
+                    </select>
+              </div>
+
+              <div class="col">
+                <input type="number" class="form-control" formControlName="enScore" placeholder="nombres d'nnees d'expertise">
+              </div>
+            </div>
+
+            <div class="row">
+                <div *ngIf="bookingForm.controls['enTest'].invalid && bookingForm.controls['enTest'].touched" class="text-danger col">
+                    Type requis!
+                </div>
+                <div *ngIf="bookingForm.controls['enScore'].invalid && bookingForm.controls['enScore'].touched" class="text-danger col">
+                    Score requis!
+                </div>
+            </div>
+        </div>
+
+      <!-- membre de famille -->
+        <div class="mb-3">
+            <label class="form-label">Il ya t'il un menbre  de votre famille ici (resident ou citoyen) ?
+            </label>
+            <div class="form-check form-switch">
+              <input class="form-check-input" style="background-color: #29b1c9;" type="checkbox" id="toggleSwitch" formControlName="linkToggleOption" (change)="onLinkToggleChange($event)">
+
+              <label class="form-check-label" for="toggleSwitch">Non / Oui</label>
+            </div>
+        </div>
+
+        <div *ngIf="linkIsOptionActive" class="mb-3">
+            <label class="form-label">Quel est votre lien familial</label>
+            <input type="text" class="form-control" formControlName="link" placeholder="Entrez votre lien">
+            <div *ngIf="bookingForm.controls['link'].invalid && bookingForm.controls['link'].touched" class="text-danger">
+              Votre lien est requis!
+            </div>
+          </div>
+
+                <!-- visa -->
+        <div class="mb-3">
+            <label class="form-label">Prévoyez vous immigrer au canada pour une période de 6 mois et plus ?
+            </label>
+            <div class="form-check form-switch">
+              <input class="form-check-input" style="background-color: #29b1c9;" type="checkbox" id="toggleSwitch" formControlName="visaToggleOption" (change)="onVisaToggleChange($event)">
+
+              <label class="form-check-label" for="toggleSwitch">Non / Oui</label>
+            </div>
+        </div>
+          
+          
+  
+        <!-- Submit Button -->
+        <button style="background-color: #29b1c9;" type="submit" class="btn btn-primary w-100" [disabled]="bookingForm.invalid">
+            Confirmer la réservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  
+  

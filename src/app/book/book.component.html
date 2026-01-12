@@ -1,0 +1,39 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- <a class="rigthConer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay=".2s"  data-aos="zoom-in" style="background-color: #29b1c9;cursor:pointer; width: 350px; height: 50px;" (click)="openModal(templateConsultation)"> 
+    <i class="fa fa-ticket" style="font-size:36px">Take a Consultation</i>
+</a> -->
+
+<div class="header-btn d-block d-lg-none  rigthConer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay=".2s"  data-aos="zoom-in">
+  <a  style="background-color: #29b1c9;cursor:pointer; color: white;" class="btn header-btn" (click)="openModal(templateConsultation)">Prendre Consultation</a>
+</div>
+
+
+<!-- templateConsultation -->
+<ng-template #templateConsultation>
+
+    <div class="modal-header" style="background-color: #29b1c9;">
+   
+      <!-- <h4 class="modal-title pull-left d-block d-sm-none" style="font-size: 10px !important;">Consultation</h4> -->
+      <h4 class="modal-title" >Consultation</h4>
+      <button type="button" class="close pull-rigth" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+   
+    </div>
+   
+    <div class="modal-body">
+       <p>Pour avoir une consultation avec nous !</p>
+        <p>Vous serez redirigé vers une autre page pour reservation !</p>
+    </div>
+   
+    <div class="modal-footer">
+   
+        <a class="boxed-btn4-xs submitZoom pull-left h-15" (click)="booking()">Oui</a>
+        <a class="boxed-btn4-red-xs submitZoom pull-rigth h-15" (click)="closeModal()">Non</a>
+    </div>
+   
+   </ng-template>
+   <!-- / templateConsultation  -->

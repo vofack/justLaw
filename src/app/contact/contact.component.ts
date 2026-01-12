@@ -4,6 +4,7 @@ import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { AppointmentComponent } from '../appointment/appointment.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
+import { bookComponent } from '../book/book.component';
 declare function initMap(): void;
 declare let AOS: any;
 declare let swal: any;
@@ -11,7 +12,7 @@ declare let swal: any;
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule , AppointmentComponent, NgxSpinnerModule, HeaderComponent, FooterComponent],
+  imports: [CommonModule, NgxSpinnerModule, bookComponent],
    providers: [NgxSpinnerService], // Provide BsModalService
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'

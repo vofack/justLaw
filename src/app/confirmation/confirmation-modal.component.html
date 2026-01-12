@@ -1,0 +1,50 @@
+<div class="modal-header">
+  <h5 class="modal-title">Confirmation de Reservation</h5>
+  <button type="button" class="btn-close" (click)="closeModal()"></button>
+</div>
+<div class="modal-body">
+  <p><strong>Name:</strong> {{ bookingDetails.name }}</p>
+  <p><strong>Email:</strong> {{ bookingDetails.email }}</p>
+  <p><strong>Date:</strong> {{ bookingDetails.date }}</p>
+  <!-- <p><strong>Time:</strong> {{ bookingDetails.time }}</p> -->
+  <p><strong>Pays d'origine :</strong> {{ bookingDetails.origin }}</p>
+  <p><strong>Pays de residence:</strong> {{ bookingDetails.residence }}</p> 
+  <p><strong>Situation matrimoniale :</strong> {{ bookingDetails.matrimonial }}</p> 
+  <p><strong>Sexe :</strong> {{ bookingDetails.sexe }}</p> 
+  <p><strong>trainingToggleOption  :</strong> {{ bookingDetails.trainingToggleOption }}</p>
+  <p><strong>formation :</strong> {{ bookingDetails.formation }}</p>  
+  <p><strong>trainingExpertise :</strong> {{ bookingDetails.trainingExpertise }}</p>  
+  <p><strong>trainingNberExpertise :</strong> {{ bookingDetails.trainingNberExpertise }}</p>  
+  <p><strong>proToggleOption  :</strong> {{ bookingDetails.proToggleOption }}</p> 
+  <p><strong>Professional :</strong> {{ bookingDetails.professional }}</p> 
+  <p><strong>proExpertise :</strong> {{ bookingDetails.proExpertise }}</p>    
+  <p><strong>proNberExpertise :</strong> {{ bookingDetails.proNberExpertise }}</p>  
+  <p><strong>frenchToggleOption  :</strong> {{ bookingDetails.frenchToggleOption }}</p>
+  <p><strong>Test de francais :</strong> {{ bookingDetails.frenchTest }}</p>
+  <p><strong>FrenchScore :</strong> {{ bookingDetails.frenchScore }}</p>   
+  <p><strong>EnToggleOption  :</strong> {{ bookingDetails.enToggleOption }}</p>
+  <p><strong>Test de d'aglais :</strong> {{ bookingDetails.enTest }}</p>
+  <p><strong>EnScore :</strong> {{ bookingDetails.enScore }}</p>   
+  <p><strong>LinkToggleOption  :</strong> {{ bookingDetails.linkToggleOption }}</p>
+  <p><strong>Link:</strong> {{ bookingDetails.link }}</p>
+  <p><strong>visaToggleOption  :</strong> {{ bookingDetails.visaToggleOption }}</p>
+
+
+
+
+
+
+
+
+
+
+
+  <p>Merci d'avoir reserve chez nous!</p>
+</div>
+<div class="modal-footer">
+  <!-- <button type="button" class="btn btn-primary" (click)="closeModal()">OK</button> -->
+
+  <button style="background-color: #29b1c9;" type="submit" class="btn btn-primary w-100" (click)="closeModal()">
+    OK
+  </button>
+</div>

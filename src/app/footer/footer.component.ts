@@ -33,9 +33,12 @@ export class FooterComponent {
     }, 1500);
   }
 
-  Home(): void {
-
-    let link = ['/'];
+  contact(): void {
+  
+    console.log('Vous avez selectionné contact');
+    let link = ['/contact'];
+    let elt = document.getElementById("menuCheckbox");
+    if (elt) elt.click(); // to close the menu
     this.spinner.show();
 
     setTimeout(() => {
@@ -45,5 +48,22 @@ export class FooterComponent {
     }, 2000);
     if(this.modalRef) this.modalRef.hide(); // pour fermer le popup  
   }
+
+
+  Home(): void {
+
+    let link = ['/'];
+    let elt = document.getElementById("menuCheckbox");
+    if (elt) elt.click(); // to close the menu    this.spinner.show();
+    this.spinner.show();
+
+    setTimeout(() => {
+      /** spinner ends after 2 seconds */
+      this.spinner.hide();
+      this.router.navigate(link);
+    }, 2000);
+    if(this.modalRef) this.modalRef.hide(); // pour fermer le popup  
+  }
+
 
 }

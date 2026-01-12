@@ -21,6 +21,7 @@ import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { CommonModule } from '@angular/common';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { ContactComponent } from './contact/contact.component';
+import { bookComponent } from './book/book.component';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,7 @@ import { ContactComponent } from './contact/contact.component';
     CommonModule,
     RouterOutlet, 
     AppointmentComponent,
+    bookComponent,
     NgxSpinnerModule,
     HeaderComponent,
     FooterComponent,

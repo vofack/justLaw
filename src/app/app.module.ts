@@ -24,12 +24,13 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule ,// ✅ Add this here
     BrowserAnimationsModule,
     CommonModule,
     ModalModule.forRoot()
   ],
   providers: [BsModalService, AsyncPipe],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 
 export class AppModule { }

@@ -6,6 +6,7 @@ import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ContactComponent } from '../contact/contact.component';
+import { bookComponent } from '../book/book.component';
 
 declare function initCounter(): void;
 declare let AOS: any;
@@ -17,7 +18,7 @@ declare let swal: any;
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule , AppointmentComponent, NgxSpinnerModule, HeaderComponent, FooterComponent, ContactComponent],
+  imports: [CommonModule, NgxSpinnerModule, bookComponent, AppointmentComponent],
    providers: [NgxSpinnerService], // Provide BsModalService
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -110,7 +111,7 @@ export class HomeComponent {
     setTimeout(() => {
       /** spinner ends after 2 seconds */
       this.spinner.hide();
-      swal.fire({title: 'Suscribtion', text: 'Thank You !', 
+      swal.fire({title: 'Souscription', text: 'Merci !', 
             confirmButtonColor: '#29b1c9', customClass: 'swal-wide', icon: 'success', position: 'top-middle'});
     }, 1500);
   }

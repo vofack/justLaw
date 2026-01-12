@@ -1,0 +1,132 @@
+
+  /************ appointement botton ********************/
+
+  .leftConer {
+    position: fixed;
+    bottom: 15px;
+    // left: 25px;
+}
+
+.rigthConer {
+	// position: fixed; /* or relative */
+	// right: 150px;
+	top: 400px;
+	height: 50px;
+	width: 300px;
+	transform: translate(-50%, -50%);
+  }
+  .cent{
+	top: 1000px;
+	height: 50px;
+	width: 300px;
+	transform: translate(-50%, -50%);
+  }
+
+.gotopbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  bottom: 40px;
+  right: 50px;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+}
+
+.boxed-btn4-xs {
+	display: inline-block;
+	padding: 5px 20px 5px 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	color: #fff !important;
+	text-transform: capitalize;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	cursor: pointer;
+	color: #29b1c9 !important;
+	border: 1px solid #29b1c9;
+	background: transparent;
+  }
+  
+  /* line 67, ../../Arafath/CL/December/234. Finance/HTML/scss/_btn.scss */
+  .boxed-btn4-xs:hover {
+	color: #fff !important;
+	border: 1px solid #29b1c9;
+	background: transparent;
+	border: 0;
+	background: #29b1c9;
+	border: 1px solid transparent;
+  }
+  
+  /* line 75, ../../Arafath/CL/December/234. Finance/HTML/scss/_btn.scss */
+  .boxed-btn4-xs:focus {
+	outline: none;
+  }
+  
+  
+  .boxed-btn4-red-xs {
+	display: inline-block;
+	padding: 5px 20px 5px 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	color: #fff !important;
+	text-transform: capitalize;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	cursor: pointer;
+	color: red !important;
+	border: 1px solid red;
+	background: transparent;
+  }
+  
+  /* line 67, ../../Arafath/CL/December/234. Finance/HTML/scss/_btn.scss */
+  .boxed-btn4-red-xs:hover {
+	color: #fff !important;
+	border: 1px solid red;
+	background: transparent;
+	border: 0;
+	background: red;
+	border: 1px solid transparent;
+  }
+  
+  /* line 75, ../../Arafath/CL/December/234. Finance/HTML/scss/_btn.scss */
+  .boxed-btn4-red-xs:focus {
+	outline: none;
+  }
+
+  .modal {
+	z-index: 1050 !important;
+  }
+  .modal-backdrop {
+	z-index: 1040 !important;
+  }
+
+  .modal-backdrop {
+  position: relative !important;
+}
+
+.modal-dialog {
+	display: flex;
+	align-items: center;
+	min-height: 100vh; /* Full viewport height */
+  }
+  
+  

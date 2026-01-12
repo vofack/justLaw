@@ -39,7 +39,10 @@ export class AppointmentComponent  {
 
   public openModal(template:TemplateRef<any>){
     // if(this.modalRef) this.modalRef.hide();
-    this.modalRef = this.modalService.show(template);
+    // this.modalRef = this.modalService.show(template);
+    this.modalRef = this.modalService.show(template, {
+      class: 'modal-dialog-centered'
+    });
   
   }
 

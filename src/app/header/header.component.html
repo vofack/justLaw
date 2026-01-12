@@ -26,72 +26,47 @@
         <link rel="stylesheet" href="./../../assets/scss/_testimonial.scss">
 
 
-       <!-- <link rel="stylesheet" href="./../../assets/scss/_about-low.scss">
-         <link rel="stylesheet" href="./../../assets/scss/_blog_page.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_blog.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_bradcam.scss">
-       <link rel="stylesheet" href="./../../assets/scss/_color.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_common.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_contact.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_david-droga.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_elements.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_extend.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_footer.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_gallery.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_getAnswer.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_h1-contact.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_h1-hero.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_legal-practice.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_mixins.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_overlay.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_safe-industery.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_services_section.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_services-details.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_services.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_team.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_testimonial.scss">
-        <link rel="stylesheet" href="./../../assets/scss/_variables.scss"> -->
-
 </head>
 <header>
     <!-- Header Start -->
-   <div class="header-area header-sticky">
-                <!-- Mobile Menu -->
+    <!-- Mobile Menu -->
     <div class="col-12">
-        <div (window:resize)="onResize($event)" class="mobile_menu d-block d-lg-none">
-                <nav role="navigation">
-                    <div id="menuToggle">
-                                <input type="checkbox" id="menuCheckbox"  />
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <!-- <div  style="cursor:pointer; font-size: 10px; margin-left: {{paddinLeftSize}}px; " class="boxed-btn4" (click)="changeLanguage()">{{language}}</div> -->
-                            <ul class="ulClass" id="menu"> 
-                            <li><a (click)="Home()"><img src="./../../assets/img/logo/logo.png" alt=""></a></li>
-                            <li><a class="aClass" (click)="Home()" style="cursor:pointer;"  >Home</a></li>
-                            <li *ngIf="showUser"><a class="aClass"  style="cursor:pointer;"  >My infos</a></li>
-                            <li><a class="aClass"   >About</a></li>
-                            <li *ngIf="showUser"><a class="aClass"  style="cursor:pointer;"  >Beneficiary</a></li>
-                            <li *ngIf="showUser"><a class="aClass"  style="cursor:pointer;"  >Transactions</a></li>
-                            <li class="aClass"><a  style="cursor:pointer;"  >Faq</a></li>
-                            <li><a class="aClass"  style="cursor:pointer;"  (click)="contact()" >Contact</a></li>
-                            <li *ngIf="showConnexion"><a class="aClass" data-wow-duration="1s" data-wow-delay=".1s"    >Connexion</a></li>
-                            <li *ngIf="showUser"  ><a class="aClass"> <i class="glyphicon glyphicon-user wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" ></i>{{user}}</a></li>
-                            <li><a class="aClass"  style="cursor:pointer; font-weight: bold;">{{language}}</a></li>
-                            <li *ngIf="showUser"    style="cursor:pointer; text-align: -webkit-center;"><a class="aClass"> <i class="glyphicon glyphicon-off text-danger wow fadeInUp " data-wow-duration="1s" data-wow-delay=".1s" ></i> </a></li>
-                            </ul>
-                    </div>
-                    
-                </nav>
-        </div>                  
-</div>
-<!-- / Mobile Menu -->
+                        <div (window:resize)="onResize($event)" class="mobile_menu d-block d-lg-none">
+                                <nav role="navigation">
+                                    <div id="menuToggle">
+                                                <input type="checkbox" id="menuCheckbox"  />
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <!-- <div  style="cursor:pointer; font-size: 10px; margin-left: {{paddinLeftSize}}px; " class="boxed-btn4" (click)="changeLanguage()">{{language}}</div> -->
+                                            <ul class="ulClass" id="menu"> 
+                                            <li><a (click)="Home()"><img src="./../../assets/img/logo/logo.png" alt=""></a></li>
+                                            <li><a class="aClass" (click)="Home()" style="cursor:pointer;"  >Accueil</a></li>
+                                            <!-- <li *ngIf="showUser"><a class="aClass"  style="cursor:pointer;"  >My infos</a></li> -->
+                                            <!-- <li><a class="aClass"   >About</a></li> -->
+                                            <!-- <li *ngIf="showUser"><a class="aClass"  style="cursor:pointer;"  ></a></li> -->
+                                            <!-- <li *ngIf="showUser"><a class="aClass"  style="cursor:pointer;"  >Transactions</a></li> -->
+                                            <!-- <li class="aClass"><a  style="cursor:pointer;"  >Faq</a></li> -->
+                                            <li><a class="aClass"  style="cursor:pointer;"  (click)="contact()" >Contact</a></li>
+                                            <!-- <li *ngIf="showConnexion"><a class="aClass" data-wow-duration="1s" data-wow-delay=".1s"    >Connexion</a></li> -->
+                                            <!-- <li *ngIf="showUser"  ><a class="aClass"> <i class="glyphicon glyphicon-user wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" ></i>{{user}}</a></li> -->
+                                            <li><a class="aClass"  style="cursor:pointer; font-weight: bold;">{{language}}</a></li>
+                                            <!-- <li *ngIf="showUser"    style="cursor:pointer; text-align: -webkit-center;"><a class="aClass"> <i class="glyphicon glyphicon-off text-danger wow fadeInUp " data-wow-duration="1s" data-wow-delay=".1s" ></i> </a></li> -->
+                                            </ul>
+                                    </div>
+                                    
+                                </nav>
+                        </div>                  
+    </div>
+     <!-- / Mobile Menu -->
+   <div class="header-area header-sticky d-none d-lg-block">
+
         <div class="container-fluid">
             <div class="row align-items-center">
                 <!-- Logo -->
                 <div class="col-xl-2 col-lg-1 col-md-1">
                     <div class="logo d-none d-lg-block">
-                    <a (click)="Home()"><img src="./../../assets/img/logo/logo.png" alt=""></a>
+                    <a (click)="Home()"><img src="./../../assets/img/logo/logo.png" alt=""></a> 
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-8 col-md-6">
@@ -99,23 +74,24 @@
                     <div class="main-menu f-right d-none d-lg-block">
                         <nav>
                             <ul id="navigation">  
-                                <li><a (click)="Home()">Home</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="caseStudies.html">Case Studies</a></li>
-                                <li><a href="blog.html">Blog</a>
+                                <li><a (click)="Home()">Accueil</a></li>
+                                <!-- <li><a href="services.html">Services</a></li> -->
+                                <li><a (click)="contact()">Contact</a></li>
+                                <!-- <li><a href="about.html">À propos</a></li> -->
+                                <!-- <li><a href="caseStudies.html">Cas étudiés</a></li> -->
+                                <!-- <li><a href="blog.html">Blog</a>
                                     <ul class="submenu">
                                         <li><a href="blog.html">Blog</a></li>
                                         <li><a href="single-blog.html">Blog Details</a></li>
                                     </ul>
-                                </li>
-                                <li><a>Pages</a>
+                                </li> -->
+                                <!-- <li><a>Pages</a>
                                     <ul class="submenu">
                                         <li><a (click)="contact()">Contact</a></li>
-                                        <li><a href="elements.html">Element</a></li>
+                                        <li><a href="elements.html">Element</a></li> 
                                         <li><a href="case_details.html">Case Details</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                             </ul>
                         </nav>
                     </div>
@@ -123,7 +99,7 @@
                 <div class="col-xl-3 col-lg-3 col-md-3">
                     <!-- Header-btn -->
                     <div class="header-btn d-none d-lg-block f-right">
-                        <a href="#" class="btn header-btn">Free Consultation</a>
+                        <a (click)="openModal(templateConsultation)" class="btn header-btn">Pendre Consultation</a>
                     </div>
                 </div>
             </div>
@@ -131,6 +107,36 @@
    </div>
     <!-- Header End -->
 </header>
+
+
+<!-- templateConsultation -->
+<ng-template #templateConsultation>
+
+    <div class="modal-header" style="background-color: #29b1c9;">
+   
+      <h4 class="modal-title pull-left d-block d-sm-none" style="font-size: 10px !important;">Contact us</h4>
+      <h4 class="modal-title pull-left d-none d-sm-block" data-wow-duration="1.2s" data-wow-delay=".5s" data-aos="fade-right" data-aos-offset="500"
+      data-aos-duration="1500">Contact us</h4>
+      <button type="button" class="close pull-rigth" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+   
+    </div>
+   
+    <div class="modal-body">
+       <p>Do you want to contact us ?</p>
+        <p>You will be redirect for booking !</p>
+    </div>
+   
+    <div class="modal-footer">
+   
+        <a class="boxed-btn4-xs submitZoom pull-left h-15" (click)="booking()">Yes</a>
+        <a class="boxed-btn4-red-xs submitZoom pull-rigth h-15" (click)="closeModal()">No</a>
+    </div>
+   
+   </ng-template>
+   <!-- / templateConsultation  -->
+
 
 <ngx-spinner
             bdColor= "rgba(151,149,149,0.4)"
