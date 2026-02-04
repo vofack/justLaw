@@ -7,6 +7,8 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ContactComponent } from '../contact/contact.component';
 import { bookComponent } from '../book/book.component';
+import { AdminDataService } from '../services/admin-data.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 declare function initCounter(): void;
 declare let AOS: any;
@@ -26,11 +28,29 @@ declare let swal: any;
 export class HomeComponent {
   language = 'FR';
   user = 'Ornella';
+  youtubeUrl: SafeResourceUrl;
+  content = "26 Rue JB D'amour"
   showConnexion = false;
   showUser = true;
   modalRef: any;
 
-  constructor(private  spinner: NgxSpinnerService) { }
+
+  constructor(
+    private spinner: NgxSpinnerService,
+    private adminData: AdminDataService,
+    private sanitizer: DomSanitizer
+  ) {
+    // Set default URL
+    this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/covooklRdTQ');
+
+    // Load from Firestore if available
+    this.adminData.getContent().subscribe(data => {
+      if (data?.youtubeUrl) {
+        this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(data.youtubeUrl);
+        this.content = data.contentText;
+      }
+    });
+  }
 
 
   ngOnInit() {

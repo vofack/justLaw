@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist/just-law-project/browser",
+    "site": "servicesenimmigrationkwuning",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -12,5 +13,11 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "dataconnect": {
+    "source": "dataconnect"
   }
 }

@@ -14,7 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 // import { NgxSpinnerModule } from 'ngx-spinner';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
@@ -28,13 +28,12 @@ import { bookComponent } from './book/book.component';
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet, 
+    RouterOutlet,
     AppointmentComponent,
-    bookComponent,
     NgxSpinnerModule,
     HeaderComponent,
-    FooterComponent,
-    ContactComponent],
+    FooterComponent
+],
   providers: [NgxSpinnerService], // Provide BsModalService
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

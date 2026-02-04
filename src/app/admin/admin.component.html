@@ -1,0 +1,43 @@
+<div class="admin-container">
+  <h2>Admin Panel</h2>
+
+  <label>
+    YouTube iframe URL
+    <input
+      type="text"
+      [(ngModel)]="youtubeUrl"
+      placeholder="https://www.youtube.com/embed/xxxx"
+    />
+  </label>
+
+  <label>
+    Text content
+    <textarea
+      rows="4"
+      [(ngModel)]="contentText"
+      placeholder="Enter text for the page"
+    ></textarea>
+  </label>
+
+  <div class="buttons">
+    <button (click)="save()">Save</button>
+    <button class="secondary" (click)="reset()">Reset</button>
+  </div>
+
+  <hr />
+
+  <h3>Live Preview</h3>
+
+  <div class="preview">
+    <iframe
+      *ngIf="youtubeUrl"
+      [src]="convertToEmbedUrl(youtubeUrl) | safeUrl"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+
+    <div class="content" *ngIf="contentText">
+      {{ contentText }}
+    </div>
+  </div>
+</div>
